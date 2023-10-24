@@ -28,6 +28,8 @@ def display_project():
     st.header(r['title'])
     st.image(image=f"images/{r['image']}")
     st.write(r['description'])
+    st.write(f"[Source Code]({r['url']})")
+
 
 
 with col3:
