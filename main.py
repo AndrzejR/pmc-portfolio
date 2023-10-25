@@ -19,7 +19,7 @@ with col2:
 content = """Below you can find some of the apps I have built in Python. Feel free to contact me."""
 st.text(content)
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
 data = pd.read_csv('data.csv', sep=';')
 
@@ -29,7 +29,6 @@ def display_project():
     st.image(image=f"images/{r['image']}")
     st.write(r['description'])
     st.write(f"[Source Code]({r['url']})")
-
 
 
 with col3:
